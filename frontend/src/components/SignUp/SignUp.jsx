@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import {RxAvatar} from 'react-icons/rx'
+import { RxAvatar } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
@@ -8,17 +8,16 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [visible, setVisible] = useState(false);
-  const [avatar, setAvatar] = useState(null)
+  const [avatar, setAvatar] = useState(null);
 
   const handleSubmit = () => {
     console.log("Submitted");
-  }
+  };
 
   const handleFileChange = (e) => {
-    const file = e.target.files[0]
+    const file = e.target.files[0];
     console.log(file);
-    
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-start items-center py-10 sm:px-6 lg:px-8">
@@ -112,25 +111,40 @@ const Signup = () => {
 
             {/* Upload Pic */}
             <div>
-                <label htmlFor="avatar" className="block text-sm font-medium text-gray-700 ">
-
-                </label>
-                <div className="mt-2 flex items-center">
-                    <span className="inline-block h-8 w-8 rounded-full overflow-hidden">
-                        {
-                            avatar ? (
-                                <img src={URL.createObjectURL(avatar)} alt="Image" className="h-full w-full object-cover rounded-full" />
-                            ) : (
-                                <RxAvatar className="h-8 w-8"/>
-                            )
-                        }
-                    </span>
-                    <label htmlFor="file-input" className="mt-5 flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
-                        <span>Upload a file</span>
-                        <input type="file" name="avatar" id="file-input" accept=".jpg, .jpeg, .png" onChange={handleFileChange} className="sr-only"/>
-                    </label>
-
+              <label
+                htmlFor="avatar"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Profile Picture
+              </label>
+              <div className="flex items-center gap-4">
+                <div className="h-14 w-14 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center cursor-pointer">
+                  {avatar ? (
+                    <img
+                      src={URL.createObjectURL(avatar)}
+                      alt="Avatar"
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <RxAvatar className="text-gray-400 h-10 w-10" />
+                  )}
                 </div>
+
+                <label
+                  htmlFor="file-input"
+                  className="cursor-pointer inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                >
+                  Upload
+                </label>
+                <input
+                  type="file"
+                  name="avatar"
+                  id="file-input"
+                  accept=".jpg, .jpeg, .png"
+                  onChange={(e) => setAvatar(e.target.files[0])}
+                  className="sr-only"
+                />
+              </div>
             </div>
 
             {/* Submit */}
@@ -147,12 +161,12 @@ const Signup = () => {
 
             {/* Sign Up */}
             <div className="flex justify-center items-center">
-              <h4 className="text-sm">Not have any account?</h4>
+              <h4 className="text-sm">Already have an account?</h4>
               <Link
-                to="/sign-up"
+                to="/login"
                 className="text-blue-600 hover:underline pl-1 text-sm"
               >
-                Sign Up
+                Sign In
               </Link>
             </div>
           </form>
