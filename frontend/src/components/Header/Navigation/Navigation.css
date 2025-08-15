@@ -2,4 +2,60 @@
     text-transform: capitalize !important;
 }
 
+.nav li .submenu{
+    visibility: hidden;
+}
 
+
+.nav li {
+  position: relative;
+}
+
+/* Default state for all submenus */
+.nav li .submenu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px); /* thoda sa shift so it can animate */
+  transition: all 0.25s ease-in-out;
+  z-index: 99;
+}
+
+/* First-level submenu: show on hover */
+.nav li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* side by side hi rahe */
+}
+
+/* Second-level submenu: positioned exactly to the right */
+.nav li .submenu li:hover > .submenu {
+  left: 100%;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Second-level submenu default hidden & shifted */
+.nav li .submenu li .submenu {
+  transform: translateX(5px);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Button style */
+.submenu-btn {
+  color: rgba(0, 0, 0, 0.8) !important;
+  width: 100% !important;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  border-radius: 0 !important;
+  text-transform: capitalize !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  transition: color 0.2s ease;
+}
+
+/* Hover effect for all buttons */
+.submenu-btn:hover {
+  color: #ff5252 !important;
+}
