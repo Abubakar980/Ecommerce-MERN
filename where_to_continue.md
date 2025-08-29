@@ -14,3 +14,8 @@ Making the navbar middle part -->
 Making responsive header - almost done -->
 
 
+ <!-- Day 3
+ break -->
+
+ <!-- Day 4 
+ 1:53:26 -->
