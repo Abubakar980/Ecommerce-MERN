@@ -1,7 +1,6 @@
 <!-- DAY 1 -->
 
-<!-- 39:00
-npx shadcn@latest add "components goes here" -->
+<!-- 39:00  npx shadcn@latest add "components goes here" --> 
 
 <!-- 1:06:58
 Making the navbar middle part -->
@@ -18,4 +17,6 @@ Making responsive header - almost done -->
  break -->
 
  <!-- Day 4 
- 2:15:30 -->
+ 2:55:30 -->
+
+ 
