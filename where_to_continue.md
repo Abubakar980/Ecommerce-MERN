@@ -19,4 +19,9 @@ Making responsive header - almost done -->
  <!-- Day 4 
  2:55:30 -->
 
+<!-- Day 5
+break python kr rha tha -->
  
+
+<!-- Day 6
+ 3:11:10 -->
