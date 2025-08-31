@@ -25,3 +25,8 @@ break python kr rha tha -->
 
 <!-- Day 6
  3:11:10 -->
+
+<!-- Day 7
+3:21:00 
+imported the sanity seed, means dummy data you can say, will manage it later ..... npx sanity@latest dataset import seed.tar.gz-->
+
