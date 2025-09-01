@@ -30,3 +30,6 @@ break python kr rha tha -->
 3:21:00 
 imported the sanity seed, means dummy data you can say, will manage it later ..... npx sanity@latest dataset import seed.tar.gz-->
 
+<!-- Day 8
+3:57:30
+Installing typegen -->
